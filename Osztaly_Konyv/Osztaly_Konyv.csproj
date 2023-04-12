@@ -43,12 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\EbookFormatException.cs" />
+    <Compile Include="Exceptions\EncyclopediaRequiredException.cs" />
+    <Compile Include="Exceptions\EmptyLanguageNotAllowedException.cs" />
+    <Compile Include="Exceptions\BookEditionYearException.cs" />
+    <Compile Include="Exceptions\AuthorNameLengthException.cs" />
+    <Compile Include="Exceptions\AccessionNumberLength.cs" />
     <Compile Include="Exceptions\ISBN_NumberFormatException.cs" />
     <Compile Include="Exceptions\ISBN_NumberLengthException.cs" />
     <Compile Include="Konyv.cs" />
     <Compile Include="KonyvesPolc.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Exceptions\TitleLengthException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

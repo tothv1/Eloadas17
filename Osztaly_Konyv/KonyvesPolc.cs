@@ -10,6 +10,7 @@ namespace Osztaly_Konyv
     {
 
         private List<Konyv> _konyvek = new List<Konyv>();
+        private Dictionary<string, int> _konyvekDic = new Dictionary<string, int>();
 
         public KonyvesPolc(List<Konyv> konyvek)
         {
@@ -19,6 +20,19 @@ namespace Osztaly_Konyv
         public KonyvesPolc()
         {
 
+        }
+
+        //-1 ha nincs benne
+        public int getBookIndex(Konyv search)
+        {
+            for (int i = 0; i < _konyvek.Count; i++)
+            {
+                if (_konyvek[i].Equals(search))
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
 
 
@@ -45,5 +59,18 @@ namespace Osztaly_Konyv
             return _konyvek.Count;
         }
 
+        internal List<Konyv> getKonyvesPolc()
+        {
+            return _konyvek;
+        }
+        public Dictionary<string, int> getKonyvesDict()
+        {
+            return _konyvekDic;
+        }
+
+        public void addKonyvToDict(string k, int v)
+        {
+            _konyvekDic.Add(k, v);
+        }
     }
 }
